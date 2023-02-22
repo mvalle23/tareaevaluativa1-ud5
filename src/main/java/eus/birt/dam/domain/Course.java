@@ -36,5 +36,6 @@ public class Course extends BaseEntity{
 		super();
 		this.name = name;
 		this.credits = credits;
+		
 	}
 }

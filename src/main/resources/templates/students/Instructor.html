@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>DAM</title>
+</head>
+<body>
+<div th:replace="fragments/header :: header"></div>
+<h2>Instructor List</h2> 
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th> First Name</th>
+        <th>Last Name</th>
+        <th>email</th>
+    </tr>
+    <tr th:each="intructor : ${instructors}">
+    	<td th:text="${intructor.id}"></td>
+        <td th:text="${intructor.firstName}"></td>
+        <td th:text="${intructor.lastName}"></td>
+        <td th:text="${intructor.email}"></td>
+    </tr>    
+</table>
+<br/>  
+<div th:replace="fragments/footer :: footer"></div>
+</body>
+</html>
