@@ -51,27 +51,28 @@ public class BootStrapData implements CommandLineRunner{
 	@Transactional //Metodo con única transaccion, evita: object references an unsaved transient instance
 	@Override
 	public void run(String... arg0) throws Exception {
-		Student student1 = new Student("Maita", "Garay","mai@gmail.com");
-		Address address1 = new Address("Donosti", "29","Donostia", "54000");
-		Tuition tuition1 = new Tuition(1000.0);
-		University university1 = new University("EHU");
-		Course course1 = new Course("Inglés",2);
-		Instructor instructor1 = new Instructor("Luna", "Amaru", "lulu@hotmail.com");
-		Instructor_detail instructorDetail1 = new Instructor_detail("ibm.com", "internet");
-		Project project1 = new Project("Proyecto", "Informatica", "2000");
+		Student student1 = new Student("Juan", "Sanchez","jusa@hotmail.com");
+		Address address1 = new Address("Barrio Gimeno", "04","Burgos", "14000");
+		Address address2 = new Address("Calle alcoy", "07","Alacant", "00005");
+		Tuition tuition1 = new Tuition(7000.0);
+		University university1 = new University("Universidad de Alicante");
+		Course course1 = new Course("Historia",6);
+		Instructor instructor1 = new Instructor("Manuel", "Loma", "malo@hotmail.com");
+		Instructor_detail instructorDetail1 = new Instructor_detail("laCasadelLibro.com", "Libros");
+		Project project1 = new Project("Proyecto", "Gestión de datos", "500");
 	
 		
 		
 		instructorDetail1.setInstructor(instructor1);
 		instructor1.setInstructorDetail(instructorDetail1);
-		//instructor1.setAddress(address2);
+		instructor1.setAddress(address2);
 		instructor1.getCourses().add(course1);
 		instructor1.getProyecto().add(project1);
 		project1.getInstructor().add(instructor1);
 		student1.setAddress(address1);
-		student1.getPhones().add("684710256");
-		student1.getPhones().add("612589658");
-		student1.setBirthdate(LocalDate.parse("1985-05-24"));
+		student1.getPhones().add("654002030");
+		student1.getPhones().add("6062036205");
+		student1.setBirthdate(LocalDate.parse("1995-01-04"));
 		university1.setAddress(address1);
 		student1.setTuition(tuition1);
 		tuition1.setStudent(student1);
