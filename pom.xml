@@ -11,8 +11,8 @@
 	<groupId>eus.birt.dam</groupId>
 	<artifactId>ud5-tareaAprendizaje3</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ud5-tareaAprendizaje3</name>
-	<description>Tarea de aprendizaje 2 para UD05</description>
+	<name>ud5-tareaEvaluativa1</name>
+	<description>ud5-tareaEvaluativa1</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
